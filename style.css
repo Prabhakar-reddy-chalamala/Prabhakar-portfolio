@@ -1,52 +1,113 @@
-body {
-  font-family: 'Roboto', sans-serif;
+/* Reset and base */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
-  color: #333;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  background-color: #f9fafb;
+  color: #111827;
+  padding: 20px;
 }
 
+/* Header */
 header {
-  background: #003366;
-  color: white;
-  padding: 20px;
+  background: #1e40af;
+  color: #f3f4f6;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+#contact-info {
+  font-size: 0.9rem;
+}
+#contact-info span, #contact-info a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+#contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Search bar */
+#search-container {
+  max-width: 600px;
+  margin: 0 auto 30px;
   text-align: center;
 }
-
-header input {
+#search-input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 2px solid #3b82f6;
+  outline-color: #3b82f6;
+  transition: border-color 0.3s;
+}
+#search-input:focus {
+  border-color: #2563eb;
+}
+#search-results {
   margin-top: 10px;
-  padding: 10px;
-  width: 60%;
-  max-width: 400px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  font-weight: 600;
+  color: #dc2626; /* red for no results */
 }
 
+/* Main content */
 main {
-  padding: 20px;
   max-width: 900px;
-  margin: auto;
-  background: white;
+  margin: 0 auto 40px;
 }
 
-section {
-  margin-bottom: 30px;
+.section {
+  background: #ffffff;
+  padding: 25px 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
 }
 
-h1, h2, h3 {
-  color: #003366;
+.section h2 {
+  color: #1e40af;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 5px;
 }
-
-ul {
+.section h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.section ul {
+  list-style-type: disc;
   padding-left: 20px;
+  margin-top: 10px;
+}
+.section ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 15px;
-  background: #003366;
-  color: white;
-  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  border-top: 1px solid #d1d5db;
+  max-width: 900px;
+  margin: 0 auto;
 }
