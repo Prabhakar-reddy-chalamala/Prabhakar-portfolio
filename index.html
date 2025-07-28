@@ -2,71 +2,247 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chalamala Prabhakar Reddy | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chalamala Prabhakar Reddy | Data Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Reset and basics */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact top bar */
+    .top-contact {
+      background: #2563eb;
+      color: #f3f4f6;
+      font-size: 0.9rem;
+      padding: 0.3rem 1rem;
+      text-align: center;
+      font-weight: 500;
+    }
+    .top-contact a {
+      color: #f3f4f6;
+      text-decoration: underline;
+      margin: 0 0.3rem;
+    }
+
+    /* Header with better contrast */
+    header {
+      background: #1e40af; /* darker blue */
+      color: #f3f4f6; /* light gray/white text */
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgb(30 64 175 / 0.6);
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+    header p {
+      font-weight: 400;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      background: white;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      list-style: none;
+    }
+    nav ul li a {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #1f2937;
+      padding: 0.5rem 0;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #2563eb;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+    section {
+      background: white;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgb(0 0 0 / 0.05);
+    }
+    section h2 {
+      margin-bottom: 1rem;
+      color: #2563eb;
+      font-weight: 700;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      list-style: disc inside;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #2563eb;
+      color: white;
+      font-weight: 500;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    /* Search bar */
+    #searchBar {
+      width: 100%;
+      max-width: 350px;
+      padding: 0.5rem 1rem;
+      margin: 1rem auto 2rem;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 1rem;
+      box-shadow: 0 0 8px rgb(37 99 235 / 0.3);
+      transition: border-color 0.3s ease;
+    }
+    #searchBar:focus {
+      border-color: #2563eb;
+      outline: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      main {
+        margin: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Contact top bar -->
+  <div class="top-contact">
+    📞 +91 6281646106 &nbsp;&nbsp; | &nbsp;&nbsp;
+    📧 <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+    🔗 <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+
   <header>
     <h1>Chalamala Prabhakar Reddy</h1>
     <p>Azure Data Engineer | Hyderabad, India</p>
-    <input type="text" id="searchBar" placeholder="Search this page..." />
   </header>
 
-  <main id="content">
+  <nav>
+    <ul>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <input type="text" id="searchBar" placeholder="Search portfolio..." aria-label="Search portfolio" />
+
     <section id="summary">
-      <h2>Professional Summary</h2>
-      <p>Azure Data Engineer with 3 years of experience in building, automating, and optimizing data pipelines...</p>
+      <h2><i class="fa-solid fa-user"></i> Professional Summary</h2>
+      <p>Azure Data Engineer with 3 years of experience in building, automating, and optimizing data pipelines using Azure Databricks, PySpark, Azure Data Factory, SQL, and Hadoop. Proven ability to streamline ETL processes, enhance data quality, and develop scalable solutions that drive business insights. Passionate about big data processing, automation, and cloud-based data engineering.</p>
     </section>
 
     <section id="skills">
-      <h2>Technical Skills</h2>
+      <h2><i class="fa-solid fa-code"></i> Technical Skills</h2>
       <ul>
-        <li>Cloud & Big Data: Azure Databricks, Azure Data Factory, Azure Data Lake</li>
-        <li>Programming: Python, PySpark, SQL</li>
-        <li>ETL: Apache Spark, Hadoop</li>
-        <li>Databases: SQL Server, PostgreSQL</li>
-        <li>DevOps: Git, CI/CD Pipelines</li>
+        <li>Azure Databricks, Azure Data Factory (ADF), Azure Data Lake, Delta Lake</li>
+        <li>Python, PySpark, SQL, Linux Shell Scripting</li>
+        <li>Apache Spark, Hadoop, Data Ingestion & Transformation</li>
+        <li>SQL Server, PostgreSQL, Delta Tables</li>
+        <li>Git, CI/CD Pipelines</li>
       </ul>
     </section>
 
     <section id="experience">
-      <h2>Professional Experience</h2>
+      <h2><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
       <h3>Software Engineer – Infinite Computer Solutions</h3>
       <p><strong>Hyderabad | Oct 2022 - Present</strong></p>
       <ul>
-        <li>Automated data validation...</li>
-        <li>Developed ETL workflows...</li>
+        <li>Automated data validation processes, reducing manual efforts and improving data integrity by 25%.</li>
+        <li>Developed ETL workflows using Azure Databricks (PySpark) to efficiently process healthcare data into structured, actionable insights.</li>
+        <li>Designed scalable data pipelines for real-time and batch processing, optimizing data ingestion and transformation.</li>
+        <li>Implemented Delta Tables for better performance, reducing query execution time by 40%.</li>
+        <li>Collaborated with business stakeholders to define data strategies, contributing to a 15% improvement in business performance.</li>
+        <li>Optimized Spark jobs for performance tuning, reducing compute costs and improving execution speed.</li>
       </ul>
     </section>
 
     <section id="education">
-      <h2>Education</h2>
-      <p>Bachelor's Degree in Mathematics<br>Bestavarapeta, India | Nov 2018 - Jan 2021</p>
+      <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+      <p>Bachelor's Degree in Mathematics<br />Bestavarapeta, India | Nov 2018 - Jan 2021</p>
     </section>
 
     <section id="projects">
-      <h2>Projects & Achievements</h2>
+      <h2><i class="fa-solid fa-trophy"></i> Projects & Achievements</h2>
       <ul>
-        <li>Built a real-time ETL pipeline...</li>
-        <li>Automated log monitoring with Python...</li>
+        <li>Developed a real-time ETL pipeline using Azure Data Factory and Databricks, reducing data processing time by 30%.</li>
+        <li>Automated log monitoring & alerts using Python, reducing manual intervention by 40%.</li>
       </ul>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>📞 +91 6281646106<br>
-         📧 <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a><br>
-         🔗 <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank">LinkedIn</a>
+      <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+      <p>
+        📞 +91 6281646106<br />
+        📧 <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a><br />
+        🔗 <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener">LinkedIn Profile</a>
       </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Chalamala Prabhakar Reddy. All rights reserved.</p>
+    &copy; 2025 Chalamala Prabhakar Reddy. All rights reserved.
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Simple search filter for sections
+    document.getElementById("searchBar").addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+      const sections = document.querySelectorAll("main section");
+      sections.forEach(section => {
+        const text = section.textContent.toLowerCase();
+        section.style.display = text.includes(query) ? "block" : "none";
+      });
+    });
+  </script>
 </body>
 </html>
