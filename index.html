@@ -10,11 +10,13 @@
 </head>
 <body>
 
-  <!-- ✅ Top contact bar -->
+  <!-- Top Contact Bar -->
   <div class="top-contact">
     <span><i class="fas fa-phone-alt"></i> +91 6281646106</span>
     <span><i class="fas fa-envelope"></i> <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a></span>
-    <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+    <span><i class="fab fa-linkedin"></i> 
+      <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </span>
   </div>
 
   <header>
@@ -33,7 +35,7 @@
     </ul>
   </nav>
 
-  <main>
+  <main id="resume-content">
     <section id="summary">
       <h2>Professional Summary</h2>
       <p>
@@ -108,17 +110,27 @@
       </ul>
     </section>
 
+    <section id="declaration">
+      <h2>Declaration</h2>
+      <p>
+        I hereby declare that the above information is true and correct to the best of my knowledge and belief.
+      </p>
+    </section>
+
     <section id="contact">
       <h2>Contact</h2>
       <p><strong>Phone:</strong> +91 6281646106</p>
       <p><strong>Email:</strong> <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener noreferrer">linkedin.com/in/prabhakar-reddy-chalamala-34923a232</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
       <p><strong>Location:</strong> Hyderabad, India</p>
     </section>
   </main>
 
   <button id="downloadBtn" title="Download Resume PDF"><i class="fas fa-download"></i></button>
 
+  <!-- jsPDF and html2canvas from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
