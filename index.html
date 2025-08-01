@@ -7,6 +7,131 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+    /* Background color */
+    body {
+      background-color: #f4f7fa;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    /* Fixed top nav */
+    nav#navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #0078d4;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1001;
+    }
+    nav#navbar ul {
+      margin: 0;
+      padding: 10px 20px;
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      overflow-x: auto;
+    }
+    nav#navbar ul li {
+      /* no bullet */
+    }
+    nav#navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 4px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    nav#navbar ul li a:hover,
+    nav#navbar ul li a.active {
+      background-color: #005a9e;
+    }
+
+    /* Padding top for main content to avoid nav overlap */
+    main.container {
+      padding-top: 70px;
+    }
+
+    /* Header styling */
+    .header {
+      padding: 20px 0 10px;
+      text-align: center;
+    }
+    .header .name {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0078d4;
+    }
+    .header .title {
+      margin: 5px 0 10px;
+      font-weight: 500;
+      color: #555;
+    }
+    .contact-info {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .contact-info a {
+      color: #0078d4;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section headings */
+    section h2 {
+      color: #0078d4;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+      border-bottom: 2px solid #0078d4;
+      padding-bottom: 4px;
+    }
+
+    /* Job and testimonial */
+    .job h3 {
+      margin-bottom: 0;
+    }
+    .job-dates {
+      font-style: italic;
+      color: #777;
+      font-size: 0.9rem;
+    }
+    .testimonial {
+      font-style: italic;
+      border-left: 3px solid #0078d4;
+      margin: 1rem 0;
+      padding-left: 1rem;
+      color: #555;
+      background: #f0f7ff;
+      border-radius: 4px;
+    }
+
+    /* Skills and lists */
+    ul.skills-list,
+    section ul {
+      padding-left: 20px;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+
     /* Print styles */
     @media print {
       body {
@@ -14,12 +139,17 @@
         color: black;
         font-size: 12pt;
       }
-      button#print-btn {
+      button#print-btn, nav#navbar {
         display: none;
       }
       a[href]:after {
         content: " (" attr(href) ")";
         font-size: 90%;
+      }
+      main.container {
+        padding-top: 0;
+        box-shadow: none;
+        border-radius: 0;
       }
     }
 
@@ -44,8 +174,7 @@
       background-color: #005a9e;
     }
 
-    /* Remove any border or lines from container or sections if present */
-    /* This ensures no lines anywhere */
+    /* Remove borders/lines */
     * {
       border: none !important;
     }
@@ -53,29 +182,38 @@
 </head>
 <body>
 
-  <header class="header">
-    <div class="container">
-      <h1 class="name">Prabhakar Reddy Chalamala</h1>
-      <p class="title">Azure Data Engineer | Hyderabad, India</p>
-      <div class="contact-info">
-        <span>Phone: <a href="tel:+916281646106">+91 6281646106</a></span> | 
-        <span>Email: <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a></span> | 
-        <span>LinkedIn: <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener">Prabhakar Reddy Chalamala</a></span> | 
-        <span>Location: Hyderabad, India</span>
-      </div>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#summary" class="active">Summary</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="header container">
+    <h1 class="name">Prabhakar Reddy Chalamala</h1>
+    <p class="title">Azure Data Engineer | Hyderabad, India</p>
+    <div class="contact-info" id="contact">
+      <span>Phone: <a href="tel:+916281646106">+91 6281646106</a></span> | 
+      <span>Email: <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a></span> | 
+      <span>LinkedIn: <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener">Prabhakar Reddy Chalamala</a></span> | 
+      <span>Location: Hyderabad, India</span>
     </div>
   </header>
 
   <main class="container">
 
-    <section>
+    <section id="summary">
       <h2>Professional Summary</h2>
       <p>
         Azure Data Engineer with 3 years of experience designing, developing, and managing secure, scalable data solutions on Azure. Skilled in Python, PySpark, SQL, Azure Databricks, Azure Data Lake, and Medallion Architecture implementation. Experienced in leveraging Unity Catalog for data governance and lineage. Proficient in automating ETL workflows, optimizing pipeline performance, and delivering actionable insights. Strong problem solver and collaborative team player committed to driving operational excellence.
       </p>
     </section>
 
-    <section>
+    <section id="skills">
       <h2>Technical Skills</h2>
       <ul class="skills-list">
         <li><strong>Programming:</strong> Python, SQL</li>
@@ -86,7 +224,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="experience">
       <h2>Professional Experience</h2>
 
       <article class="job">
@@ -126,7 +264,7 @@
       </article>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
       <ul>
         <li>Real-Time ETL Pipeline: Built a real-time ETL pipeline using Azure Data Factory and Databricks, cutting processing time by 30%.</li>
@@ -135,7 +273,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="education">
       <h2>Education</h2>
       <p>Bachelor’s Degree in Mathematics<br />Bestavarapeta, India | Nov 2018 – Jan 2021</p>
     </section>
@@ -153,6 +291,33 @@
   </main>
 
   <button id="print-btn" onclick="window.print()">Download Resume as PDF</button>
+
+  <script>
+    // Highlight nav menu link on scroll
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = document.querySelectorAll("#navbar ul li a");
+
+    function activateMenu() {
+      let scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 80; // offset for nav height
+        const sectionId = section.getAttribute("id");
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          navLinks.forEach(link => {
+            link.classList.remove("active");
+            if(link.getAttribute("href") === "#" + sectionId) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+    }
+
+    window.addEventListener("scroll", activateMenu);
+  </script>
 
 </body>
 </html>
