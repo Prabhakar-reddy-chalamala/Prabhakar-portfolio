@@ -1,163 +1,44 @@
-/* Global */
-body {
-  margin: 0;
-  background: #f4f7fa;
-  font-family: 'Inter', sans-serif;
-  color: #333;
-  line-height: 1.5;
-}
+// Smooth scrolling and active link highlight
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('#navbar a');
+  const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href')));
+  
+  function onScroll() {
+    const scrollPos = window.scrollY + 80; // offset for sticky nav + some padding
+    sections.forEach((section, i) => {
+      if (
+        section.offsetTop <= scrollPos &&
+        section.offsetTop + section.offsetHeight > scrollPos
+      ) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        navLinks[i].classList.add('active');
+      }
+    });
+  }
+  window.addEventListener('scroll', onScroll);
 
-a {
-  color: #0078d4;
-  text-decoration: none;
-}
+  // Smooth scroll on click
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
 
-a:hover {
-  text-decoration: underline;
-}
+  // Download Resume as PDF
+  const downloadBtn = document.getElementById('downloadBtn');
+  downloadBtn.addEventListener('click', () => {
+    const { jsPDF } = window.jspdf;
+    const resume = document.getElementById('resume-content');
 
-/* Top Contact Bar */
-.top-contact {
-  background: #0078d4;
-  color: white;
-  padding: 8px 20px;
-  font-size: 0.9rem;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.top-contact span {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.top-contact i {
-  color: #ffd54f;
-}
-
-/* Header */
-.header {
-  text-align: center;
-  padding: 30px 20px 10px;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.header h1 {
-  margin: 0;
-  font-weight: 700;
-  font-size: 2.5rem;
-  color: #0078d4;
-}
-
-.header .subtitle {
-  margin-top: 8px;
-  font-weight: 500;
-  font-size: 1.1rem;
-  color: #555;
-}
-
-/* Nav */
-nav#navbar {
-  background: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-nav#navbar ul {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 10px 0;
-  list-style: none;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-nav#navbar ul li a {
-  font-weight: 600;
-  color: #0078d4;
-  padding: 8px 12px;
-  border-radius: 4px;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-nav#navbar ul li a:hover,
-nav#navbar ul li a.active {
-  background-color: #0078d4;
-  color: white;
-}
-
-/* Main Content */
-#resume-content {
-  max-width: 900px;
-  margin: 30px auto 60px;
-  padding: 0 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-}
-
-#resume-content h2 {
-  color: #0078d4;
-  border-bottom: 2px solid #0078d4;
-  padding-bottom: 6px;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-#resume-content ul {
-  padding-left: 20px;
-}
-
-.job-dates {
-  font-style: italic;
-  color: #777;
-  font-size: 0.9rem;
-  display: block;
-  margin-bottom: 12px;
-}
-
-.testimonial {
-  font-style: italic;
-  border-left: 3px solid #0078d4;
-  background: #f0f7ff;
-  padding-left: 15px;
-  margin: 15px 0;
-  color: #555;
-  border-radius: 4px;
-}
-
-#resume-content h4 {
-  margin-top: 20px;
-  margin-bottom: 8px;
-  font-weight: 700;
-}
-
-/* Download button */
-#print-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #0078d4;
-  border: none;
-  color: white;
-  padding: 12px 18px;
-  font-size: 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease;
-  z-index: 1000;
-}
-
-#print-btn:hover {
-  background-color: #005fa3;
-}
+    html2canvas(resume, { scale: 2 }).then(canvas => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'pt', 'a4');
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+      pdf.save('Prabhakar_Reddy_Chalamala_Resume.pdf');
+    });
+  });
+});
