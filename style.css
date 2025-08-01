@@ -1,124 +1,206 @@
-/* Reset and base styles */
+/* Reset */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+  color: #1e293b;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-  padding: 20px;
+  scroll-behavior: smooth;
+  padding-top: 90px; /* for fixed top contact bar and nav */
 }
 
-.container {
-  max-width: 900px;
-  background-color: #fff;
-  margin: auto;
-  padding: 30px 40px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  border-radius: 8px;
+/* Top Contact Bar */
+.top-contact {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 15px;
+  z-index: 10000;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #004d99;
-}
-
-header p a {
-  color: #0066cc;
+.top-contact a {
+  color: #bfdbfe;
   text-decoration: none;
+  font-weight: 600;
 }
 
-header p a:hover {
+.top-contact a:hover {
   text-decoration: underline;
 }
 
-.section {
-  margin-bottom: 25px;
+/* Header */
+header {
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  text-align: center;
 }
 
-.section h2 {
-  border-bottom: 3px solid #004d99;
-  padding-bottom: 5px;
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: 0.05em;
+}
+
+header .subtitle {
+  font-size: 1.2rem;
+  color: #334155;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #cbd5e1;
+  z-index: 9999;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 0.05);
+}
+
+nav ul {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px 0;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  border-color: #2563eb;
+  color: #1e293b;
+}
+
+/* Main content container */
+main {
+  max-width: 900px;
+  background: white;
+  margin: 0 auto 40px auto;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+/* Section Headings */
+h2 {
+  font-size: 2rem;
   margin-bottom: 15px;
-  color: #004d99;
-}
-
-.section ul {
-  list-style-type: disc;
-  margin-left: 20px;
-  margin-bottom: 15px;
-}
-
-.section ul li {
-  margin-bottom: 8px;
+  color: #2563eb;
+  border-bottom: 3px solid #2563eb;
+  padding-bottom: 6px;
 }
 
 h3 {
-  color: #333;
-  margin-top: 15px;
+  font-size: 1.4rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #334155;
 }
 
 h4 {
-  margin-top: 12px;
-  margin-bottom: 8px;
-  color: #0059b3;
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-top: 15px;
+  color: #475569;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #475569;
+}
+
+ul {
+  list-style: disc inside;
+  margin-bottom: 25px;
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 blockquote {
+  margin: 20px 0;
+  padding-left: 20px;
+  border-left: 4px solid #2563eb;
+  color: #1e293b;
   font-style: italic;
-  color: #555;
-  border-left: 4px solid #004d99;
-  padding-left: 12px;
-  margin: 15px 0;
+  background-color: #f0f9ff;
+  border-radius: 5px;
 }
 
-/* Download button styles */
+/* Links */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Download Button */
 #downloadBtn {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #004d99;
-  color: white;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2563eb;
   border: none;
-  padding: 15px 18px;
-  font-size: 24px;
+  color: white;
+  font-size: 1.5rem;
+  padding: 12px 18px;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 15px rgb(37 99 235 / 0.5);
   transition: background-color 0.3s ease;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 #downloadBtn:hover {
-  background-color: #003366;
+  background-color: #1e40af;
 }
 
-/* Print Styles */
-@media print {
+/* Responsive */
+@media (max-width: 640px) {
   body {
-    background: white;
-    padding: 0;
+    padding-top: 130px;
   }
 
-  .container {
-    box-shadow: none;
-    border-radius: 0;
-    padding: 0;
-    max-width: 100%;
-    margin: 0;
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
   }
 
-  #downloadBtn {
-    display: none;
+  main {
+    padding: 30px 20px;
+    margin: 0 10px 30px 10px;
   }
 }
