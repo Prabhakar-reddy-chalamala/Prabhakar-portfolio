@@ -22,6 +22,33 @@
         font-size: 90%;
       }
     }
+
+    /* Button fixed bottom-right */
+    #print-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    #print-btn:hover {
+      background-color: #005a9e;
+    }
+
+    /* Remove any border or lines from container or sections if present */
+    /* This ensures no lines anywhere */
+    * {
+      border: none !important;
+    }
   </style>
 </head>
 <body>
@@ -33,15 +60,11 @@
       <div class="contact-info">
         <span>Phone: <a href="tel:+916281646106">+91 6281646106</a></span> | 
         <span>Email: <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a></span> | 
-        <span>LinkedIn: <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener">linkedin.com/in/prabhakar-reddy-chalamala-34923a232</a></span> | 
+        <span>LinkedIn: <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener">Prabhakar Reddy Chalamala</a></span> | 
         <span>Location: Hyderabad, India</span>
       </div>
     </div>
   </header>
-
-  <div class="container" style="margin: 20px 0; text-align: center;">
-    <button id="print-btn" onclick="window.print()">Download Resume as PDF</button>
-  </div>
 
   <main class="container">
 
@@ -128,6 +151,8 @@
     </section>
 
   </main>
+
+  <button id="print-btn" onclick="window.print()">Download Resume as PDF</button>
 
 </body>
 </html>
