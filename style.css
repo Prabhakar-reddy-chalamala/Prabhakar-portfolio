@@ -1,126 +1,163 @@
-/* Reset and Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Global */
 body {
+  margin: 0;
+  background: #f4f7fa;
   font-family: 'Inter', sans-serif;
-  background-color: #fff;
-  color: #222;
+  color: #333;
   line-height: 1.5;
-  font-size: 16px;
-  padding: 20px 0;
 }
 
-.container {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 20px;
+a {
+  color: #0078d4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Top Contact Bar */
+.top-contact {
+  background: #0078d4;
+  color: white;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.top-contact span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-contact i {
+  color: #ffd54f;
 }
 
 /* Header */
 .header {
   text-align: center;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #0078d4;
-  margin-bottom: 30px;
+  padding: 30px 20px 10px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.name {
-  font-size: 2.5rem;
+.header h1 {
+  margin: 0;
   font-weight: 700;
+  font-size: 2.5rem;
   color: #0078d4;
 }
 
-.title {
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin-top: 4px;
+.header .subtitle {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 1.1rem;
   color: #555;
 }
 
-.contact-info {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #0078d4;
+/* Nav */
+nav#navbar {
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-.contact-info a {
-  color: #0078d4;
-  text-decoration: none;
-  margin: 0 6px;
+nav#navbar ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px 0;
+  list-style: none;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav#navbar ul li a {
   font-weight: 600;
-}
-
-.contact-info a:hover,
-.contact-info a:focus {
-  text-decoration: underline;
-}
-
-/* Headings */
-h2 {
   color: #0078d4;
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 1.5rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+nav#navbar ul li a:hover,
+nav#navbar ul li a.active {
+  background-color: #0078d4;
+  color: white;
+}
+
+/* Main Content */
+#resume-content {
+  max-width: 900px;
+  margin: 30px auto 60px;
+  padding: 0 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+#resume-content h2 {
+  color: #0078d4;
   border-bottom: 2px solid #0078d4;
   padding-bottom: 6px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: 700;
 }
 
-h3 {
-  color: #222;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 6px;
+#resume-content ul {
+  padding-left: 20px;
 }
 
 .job-dates {
-  display: block;
-  font-size: 0.85rem;
   font-style: italic;
+  color: #777;
+  font-size: 0.9rem;
+  display: block;
   margin-bottom: 12px;
-  color: #555;
 }
 
-/* Paragraphs and Lists */
-p {
-  margin-bottom: 15px;
-  color: #333;
-}
-
-ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
-  list-style-type: disc;
-  color: #333;
-}
-
-ul li {
-  margin-bottom: 8px;
-}
-
-/* Testimonial block */
 .testimonial {
   font-style: italic;
-  background-color: #e1f0ff;
-  border-left: 5px solid #0078d4;
-  padding: 10px 15px;
-  margin-top: 15px;
-  color: #005a9e;
-  border-radius: 3px;
+  border-left: 3px solid #0078d4;
+  background: #f0f7ff;
+  padding-left: 15px;
+  margin: 15px 0;
+  color: #555;
+  border-radius: 4px;
 }
 
-/* Responsive */
-@media (max-width: 480px) {
-  .name {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.3rem;
-  }
-  h3 {
-    font-size: 1.1rem;
-  }
+#resume-content h4 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+/* Download button */
+#print-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0078d4;
+  border: none;
+  color: white;
+  padding: 12px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+#print-btn:hover {
+  background-color: #005fa3;
 }
