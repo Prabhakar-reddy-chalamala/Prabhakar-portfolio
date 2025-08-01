@@ -3,78 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chalamala Prabhakar Reddy | Azure Data Engineer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Prabhakar Reddy Chalamala - Resume</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Prabhakar Reddy Chalamala</h1>
+      <p>
+        Phone: +91 6281646106 | Email:
+        <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a> |
+        LinkedIn:
+        <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener noreferrer">
+          linkedin.com/in/prabhakar-reddy-chalamala-34923a232
+        </a> |
+        Location: Hyderabad, India
+      </p>
+    </header>
 
-  <!-- Fixed Top Contact Bar -->
-  <div class="top-contact-bar">
-    <span>📞 +91 6281646106</span>
-    <span>📧 <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a></span>
-    <span>🔗 <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener">LinkedIn</a></span>
-
-    <button id="darkModeToggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
-      <i class="fa-solid fa-moon"></i>
-    </button>
-  </div>
-
-  <!-- Header Section -->
-  <header>
-    <h1 class="main-title">Chalamala Prabhakar Reddy</h1>
-    <p class="subtitle">Azure Data Engineer | Hyderabad, India</p>
-  </header>
-
-  <!-- Navigation Menu -->
-  <nav class="main-nav">
-    <ul>
-      <li><a href="#summary" class="nav-link active">Summary</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#experience" class="nav-link">Experience</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#education" class="nav-link">Education</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section id="summary" class="section">
-      <h2><i class="fa-solid fa-user"></i> Professional Summary</h2>
-      <p>Azure Data Engineer with 3 years of experience designing, developing, and managing secure, scalable data solutions on Azure. Skilled in Python, PySpark, SQL, Azure Databricks, Azure Data Lake, and Medallion Architecture implementation. Experienced in leveraging Unity Catalog for data governance and lineage. Proficient in automating ETL workflows, optimizing pipeline performance, and delivering actionable insights. Strong problem solver and collaborative team player committed to driving operational excellence.</p>
+    <section class="section">
+      <h2>Professional Summary</h2>
+      <p>
+        Azure Data Engineer with 3 years of experience designing, developing, and managing secure, scalable data
+        solutions on Azure. Skilled in Python, PySpark, SQL, Azure Databricks, Azure Data Lake, and Medallion
+        Architecture implementation. Experienced in leveraging Unity Catalog for data governance and lineage.
+        Proficient in automating ETL workflows, optimizing pipeline performance, and delivering actionable insights.
+        Strong problem solver and collaborative team player committed to driving operational excellence.
+      </p>
     </section>
 
-    <section id="skills" class="section">
-      <h2><i class="fa-solid fa-code"></i> Technical Skills</h2>
-
-      <div class="skill">
-        <span>Python</span>
-        <div class="skill-bar"><div class="skill-level" style="--level:90%"></div></div>
-      </div>
-      <div class="skill">
-        <span>SQL</span>
-        <div class="skill-bar"><div class="skill-level" style="--level:85%"></div></div>
-      </div>
-      <div class="skill">
-        <span>Azure Databricks</span>
-        <div class="skill-bar"><div class="skill-level" style="--level:80%"></div></div>
-      </div>
-      <div class="skill">
-        <span>PySpark</span>
-        <div class="skill-bar"><div class="skill-level" style="--level:75%"></div></div>
-      </div>
-      <div class="skill">
-        <span>AutoSys</span>
-        <div class="skill-bar"><div class="skill-level" style="--level:70%"></div></div>
-      </div>
-      <!-- Add more skill bars similarly -->
+    <section class="section">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Programming:</strong> Python, SQL</li>
+        <li><strong>Big Data & Cloud:</strong> Azure Databricks, Unity Catalog, Delta Lake, PySpark, Spark SQL, Azure Data Lake, Azure SQL Server</li>
+        <li><strong>ETL & Orchestration:</strong> AutoSys</li>
+        <li><strong>Version Control & CI/CD:</strong> Azure DevOps, Git</li>
+        <li><strong>Tools:</strong> Jupyter Notebook, Linux Shell Scripting, SQL Server</li>
+      </ul>
     </section>
 
-    <section id="experience" class="section">
-      <h2><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
-      <h3>Software Engineer — Infinite Computer Solutions, Hyderabad</h3>
-      <p><em>October 2022 – Present</em></p>
+    <section class="section">
+      <h2>Professional Experience</h2>
+      <h3>Infinite Computer Solutions — Hyderabad</h3>
+      <p><em>Software Engineer (October 2022 – Present)</em></p>
       <ul>
         <li>Developed and optimized PySpark scripts and Azure Databricks notebooks for Level-2 data curation, transforming datasets from raw layers into actionable business insights.</li>
         <li>Automated data ingestion and transformation workflows using Python, reducing manual intervention by 30%.</li>
@@ -86,15 +58,22 @@
         <li>Collaborated with stakeholders to align data solutions with evolving business requirements.</li>
       </ul>
 
-      <h4>Key Project: L1 Chronic Condition Reports Implementation – Genesys & CCA (Healthcare Domain)</h4>
-      <p>Led end-to-end development of L1 chronic condition reports using Azure Databricks and PySpark from scratch with minimal guidance. Adapted quickly to evolving requirements and unknowns, delivering high-quality code and reports on time. Created AutoSys jobs to automate pipeline scheduling and monitoring.</p>
+      <h4>Key Project:</h4>
+      <p><strong>L1 Chronic Condition Reports Implementation – Genesys & CCA (Healthcare Domain)</strong></p>
+      <ul>
+        <li>Led end-to-end development of L1 chronic condition reports using Azure Databricks and PySpark from scratch with minimal guidance.</li>
+        <li>Adapted quickly to evolving requirements and unknowns, delivering high-quality code and reports on time.</li>
+        <li>Created AutoSys jobs to automate pipeline scheduling and monitoring.</li>
+      </ul>
 
+      <h4>Client Recognition:</h4>
       <blockquote>
-        <p>"I would like to appreciate Prabhakar for all his hard work on the L1 chronic condition reports implementation for Genesys and CCA. He took the project from scratch and ran with it with minimal guidance. It was not an easy project since there were several unknowns when we started and requirements were changed multiple times. He took the time to code/test and deliver on time. Appreciate all your work Prabhakar. Thank you for all that you do."</p>
-        <footer>— Client Manager, Genesys Project</footer>
+        "I would like to appreciate Prabhakar for all his hard work on the L1 chronic condition reports implementation for Genesys and CCA. He took the project from scratch and ran with it with minimal guidance. It was not an easy project since there were several unknowns when we started and requirements were changed multiple times. He took the time to code/test and deliver on time. Appreciate all your work Prabhakar. Thank you for all that you do."
+        <br />
+        — Client Manager, Genesys Project
       </blockquote>
 
-      <h4>Achievements</h4>
+      <h4>Achievements:</h4>
       <ul>
         <li>Reduced pipeline execution time by 20% through PySpark and pipeline optimizations.</li>
         <li>Awarded “Infinite Spark Award” (Performer of the Quarter, JAS-2024) and “Infinite Spot Award” (Performer of the Month, August 2024).</li>
@@ -103,8 +82,8 @@
       </ul>
     </section>
 
-    <section id="projects" class="section">
-      <h2><i class="fa-solid fa-trophy"></i> Projects & Achievements</h2>
+    <section class="section">
+      <h2>Projects</h2>
       <ul>
         <li>Real-Time ETL Pipeline: Built a real-time ETL pipeline using Azure Data Factory and Databricks, cutting processing time by 30%.</li>
         <li>Log Monitoring Automation: Automated log monitoring and alerting with Python, improving operational efficiency by 40%.</li>
@@ -112,95 +91,32 @@
       </ul>
     </section>
 
-    <section id="education" class="section">
-      <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
-      <p><strong>Bachelor’s Degree in Mathematics</strong><br />Bestavarapeta, India | Nov 2018 – Jan 2021</p>
+    <section class="section">
+      <h2>Education</h2>
+      <p><strong>Bachelor’s Degree in Mathematics</strong></p>
+      <p>Bestavarapeta, India | Nov 2018 – Jan 2021</p>
     </section>
 
-    <section id="contact" class="section">
-      <h2><i class="fa-solid fa-envelope"></i> Contact Me</h2>
-      <form id="contactForm" novalidate>
-        <label for="name">Name *</label>
-        <input type="text" id="name" name="name" required placeholder="Your full name" />
-        
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required placeholder="Your email address" />
-        
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
-        
-        <button type="submit" class="submit-btn">Send Message</button>
-        <p id="formMessage" class="form-message"></p>
-      </form>
+    <section class="section">
+      <h2>Soft Skills</h2>
+      <ul>
+        <li>Problem Solving & Debugging</li>
+        <li>Communication & Collaboration</li>
+        <li>Agile & Scrum Methodologies</li>
+        <li>Time Management & Attention to Detail</li>
+      </ul>
     </section>
-  </main>
+  </div>
 
-  <!-- Back to Top Button -->
-  <button id="backToTopBtn" aria-label="Back to top" title="Back to Top">
-    <i class="fa-solid fa-arrow-up"></i>
+  <!-- Download button -->
+  <button id="downloadBtn" title="Download or Print Resume">
+    &#128190;
   </button>
 
-  <footer>
-    &copy; 2025 Chalamala Prabhakar Reddy. All rights reserved.
-  </footer>
-
   <script>
-    // Dark Mode Toggle
-    const darkToggle = document.getElementById('darkModeToggle');
-    darkToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      const icon = darkToggle.querySelector('i');
-      if(document.body.classList.contains('dark-mode')) {
-        icon.classList.replace('fa-moon', 'fa-sun');
-      } else {
-        icon.classList.replace('fa-sun', 'fa-moon');
-      }
-    });
-
-    // Back to Top Button
-    const backToTopBtn = document.getElementById('backToTopBtn');
-    window.addEventListener('scroll', () => {
-      if(window.scrollY > 300) {
-        backToTopBtn.style.display = 'block';
-      } else {
-        backToTopBtn.style.display = 'none';
-      }
-    });
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({top: 0, behavior: 'smooth'});
-    });
-
-    // Contact Form Validation & Submit Handler
-    const contactForm = document.getElementById('contactForm');
-    const formMessage = document.getElementById('formMessage');
-
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const name = contactForm.name.value.trim();
-      const email = contactForm.email.value.trim();
-      const message = contactForm.message.value.trim();
-
-      if(!name || !email || !message) {
-        formMessage.textContent = "Please fill in all required fields.";
-        formMessage.style.color = 'red';
-        return;
-      }
-
-      // Basic email regex validation
-      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/i;
-      if(!emailPattern.test(email)) {
-        formMessage.textContent = "Please enter a valid email address.";
-        formMessage.style.color = 'red';
-        return;
-      }
-
-      formMessage.textContent = "Thank you for your message! I will get back to you soon.";
-      formMessage.style.color = 'green';
-
-      contactForm.reset();
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      window.print();
     });
   </script>
-
 </body>
 </html>
