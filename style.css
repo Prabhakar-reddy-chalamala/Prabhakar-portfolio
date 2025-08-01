@@ -1,31 +1,140 @@
-/* Background color for entire page */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  padding: 20px 15px 40px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
+  padding: 0;
+  background-color: #f0f4f8;
   color: #333;
-  background-color: #f9fafc; /* light, subtle background */
 }
 
-/* Top Contact Bar */
+/* Sticky Navigation */
+#sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 10px 0;
+}
+
+#sticky-nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+#sticky-nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+#sticky-nav ul li a:hover {
+  color: #0056b3;
+}
+
+/* Contact Bar */
 .top-contact {
   display: flex;
-  gap: 30px;
   justify-content: center;
-  background-color: #e9eff5;
-  padding: 8px 0;
+  background-color: #dce6f1;
+  padding: 10px 0;
   font-size: 14px;
-  color: #555;
-  margin-bottom: 15px;
+  gap: 30px;
+  margin-top: 50px; /* Leave space for sticky nav */
 }
+
 .top-contact span {
   display: flex;
   align-items: center;
   gap: 6px;
 }
+
 .top-contact a {
-  color: #555
+  color: #007BFF;
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-top: 80px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Main Content */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #333;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+blockquote {
+  background-color: #f7f9fc;
+  border-left: 4px solid #007BFF;
+  padding: 10px 20px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Download Button */
+#downloadBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  font-size: 22px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#downloadBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #sticky-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-contact {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 13px;
+  }
+}
