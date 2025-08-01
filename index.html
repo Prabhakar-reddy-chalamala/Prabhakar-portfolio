@@ -11,7 +11,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Your CSS -->
+  <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -25,7 +25,7 @@
     </span>
   </div>
 
-  <!-- Sticky Navigation Above Header -->
+  <!-- Sticky Navigation -->
   <nav id="sticky-nav">
     <ul>
       <li><a href="#summary">Summary</a></li>
@@ -37,20 +37,20 @@
     </ul>
   </nav>
 
+  <!-- Header -->
   <header>
     <h1>Chalamala Prabhakar Reddy</h1>
     <p class="subtitle">Azure Data Engineer | Hyderabad, India</p>
   </header>
 
+  <!-- Main Content -->
   <main id="resume-content">
     <section id="summary">
       <h2>Professional Summary</h2>
       <p>
-        Azure Data Engineer with 3 years of experience designing, developing, and managing secure, scalable data solutions on Azure. Skilled in Python, PySpark, SQL, Azure Databricks, Azure Data Lake, and Medallion Architecture implementation. Experienced in leveraging Unity Catalog for data governance and lineage. Proficient in automating ETL workflows, optimizing pipeline performance, and delivering actionable insights. Strong problem solver and collaborative team player committed to driving operational excellence.
+        Azure Data Engineer with 3 years of experience designing, developing, and managing secure, scalable data solutions on Azure. Skilled in Python, PySpark, SQL, Azure Databricks, Azure Data Lake, and Medallion Architecture implementation. Experienced in leveraging Unity Catalog for data governance and lineage. Proficient in automating ETL workflows, optimizing pipeline performance, and delivering actionable insights.
       </p>
     </section>
-
-    <!-- Other sections unchanged -->
 
     <section id="skills">
       <h2>Technical Skills</h2>
@@ -76,32 +76,27 @@
       <h3>Infinite Computer Solutions — Hyderabad</h3>
       <p><em>Software Engineer | October 2022 – Present</em></p>
       <ul>
-        <li>Developed and optimized PySpark scripts and Azure Databricks notebooks for Level-2 data curation, transforming datasets from raw layers into actionable business insights.</li>
-        <li>Automated data ingestion and transformation workflows using Python, reducing manual intervention by 30%.</li>
-        <li>Created AutoSys jobs to schedule PySpark notebooks and orchestrate data pipelines, ensuring timely and reliable execution.</li>
-        <li>Implemented Unity Catalog to manage centralized governance, fine-grained access control, and data lineage within Azure Databricks.</li>
-        <li>Designed and optimized Azure Data Factory pipelines for efficient data movement between Azure Data Lake and Azure SQL Server.</li>
-        <li>Validated input/output datasets using SQL and conducted thorough quality checks for data accuracy and consistency.</li>
-        <li>Managed source control, performed peer code reviews, and led CI/CD production deployments via Azure DevOps ensuring zero-defect releases.</li>
-        <li>Collaborated with stakeholders to align data solutions with evolving business requirements.</li>
+        <li>Developed and optimized PySpark scripts and Azure Databricks notebooks for Level-2 data curation.</li>
+        <li>Automated workflows using Python and AutoSys.</li>
+        <li>Implemented Unity Catalog for governance and lineage in Azure Databricks.</li>
+        <li>Collaborated with stakeholders for business-aligned solutions.</li>
       </ul>
 
-      <h4>Key Project: L1 Chronic Condition Reports Implementation – Genesys & CCA (Healthcare Domain)</h4>
+      <h4>Key Project: L1 Chronic Condition Reports – Genesys & CCA</h4>
       <p>
-        Led end-to-end development of L1 chronic condition reports using Azure Databricks and PySpark from scratch with minimal guidance. Adapted quickly to evolving requirements and unknowns, delivering high-quality code and reports on time. Created AutoSys jobs to automate pipeline scheduling and monitoring.
+        Led end-to-end development of chronic condition reports using Azure Databricks and PySpark.
       </p>
 
       <blockquote>
-        "I would like to appreciate Prabhakar for all his hard work on the L1 chronic condition reports implementation for Genesys and CCA. He took the project from scratch and ran with it with minimal guidance. It was not an easy project since there were several unknowns when we started and requirements were changed multiple times. He took the time to code/test and deliver on time. Appreciate all your work Prabhakar. Thank you for all that you do."
-        <br><strong>— Client Manager, Genesys Project</strong>
+        "Appreciate Prabhakar for taking this from scratch and delivering quality on time with minimal guidance."
+        <br><strong>— Client Manager</strong>
       </blockquote>
 
       <h3>Achievements</h3>
       <ul>
-        <li>Reduced pipeline execution time by 20% through PySpark and pipeline optimizations.</li>
-        <li>Awarded “Infinite Spark Award” (Performer of the Quarter, JAS-2024) and “Infinite Spot Award” (Performer of the Month, August 2024).</li>
-        <li>Developed automation scripts for log monitoring and alerts, cutting manual intervention by 40%.</li>
-        <li>Achieved 100% compliance and zero defects in production deployments.</li>
+        <li>Reduced pipeline time by 20% through optimization.</li>
+        <li>Won “Infinite Spark Award” and “Infinite Spot Award”.</li>
+        <li>Automated log monitoring with 40% less manual effort.</li>
       </ul>
     </section>
 
@@ -113,9 +108,9 @@
     <section id="projects">
       <h2>Projects</h2>
       <ul>
-        <li>Real-Time ETL Pipeline: Built a real-time ETL pipeline using Azure Data Factory and Databricks, cutting processing time by 30%.</li>
-        <li>Log Monitoring Automation: Automated log monitoring and alerting with Python, improving operational efficiency by 40%.</li>
-        <li>L1 Chronic Condition Reports: Designed and delivered healthcare analytics reports using PySpark, Databricks, and AutoSys.</li>
+        <li>Real-Time ETL Pipeline using Azure Data Factory and Databricks</li>
+        <li>Log Monitoring Automation in Python</li>
+        <li>Healthcare Reports with PySpark & AutoSys</li>
       </ul>
     </section>
 
@@ -130,7 +125,7 @@
       <h2>Contact</h2>
       <p><strong>Phone:</strong> +91 6281646106</p>
       <p><strong>Email:</strong> <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank">LinkedIn</a></p>
       <p><strong>Location:</strong> Hyderabad, India</p>
     </section>
   </main>
@@ -138,10 +133,9 @@
   <!-- Download Button -->
   <button id="downloadBtn" title="Download Resume PDF"><i class="fas fa-download"></i></button>
 
-  <!-- jsPDF and html2canvas from CDN -->
+  <!-- PDF Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
   <script>
     window.onload = () => {
       const downloadBtn = document.getElementById('downloadBtn');
@@ -152,23 +146,18 @@
           const imgData = canvas.toDataURL('image/png');
           const pdf = new jspdf.jsPDF('p', 'pt', 'a4');
           const pdfWidth = pdf.internal.pageSize.getWidth();
-          const pdfHeight = pdf.internal.pageSize.getHeight();
-
           const imgProps = pdf.getImageProperties(imgData);
-          const imgWidth = pdfWidth;
-          const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
-
-          let heightLeft = imgHeight;
+          const imgHeight = (imgProps.height * pdfWidth) / imgProps.width;
           let position = 0;
 
-          pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-          heightLeft -= pdfHeight;
+          pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeight);
+          let heightLeft = imgHeight - pdf.internal.pageSize.getHeight();
 
           while (heightLeft > 0) {
             position = heightLeft - imgHeight;
             pdf.addPage();
-            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-            heightLeft -= pdfHeight;
+            pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeight);
+            heightLeft -= pdf.internal.pageSize.getHeight();
           }
 
           pdf.save('Chalamala-Prabhakar-Reddy-Resume.pdf');
