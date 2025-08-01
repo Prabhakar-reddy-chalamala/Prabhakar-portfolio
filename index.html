@@ -4,142 +4,155 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Prabhakar Reddy Chalamala - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <!-- Include html2pdf.js library for PDF export -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
+  <header>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#contact" class="nav-link active">Contact</a></li>
+        <li><a href="#summary" class="nav-link">Summary</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#softskills" class="nav-link">Soft Skills</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div id="contact-bar">
-  <div>
-    Phone: +91 6281646106 | Email: <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a>
-  </div>
-  <div>
-    LinkedIn: <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener">linkedin.com/in/prabhakar-reddy-chalamala-34923a232</a> | Location: Hyderabad, India
-  </div>
-</div>
+  <main id="main-content">
+    <section id="contact" class="section">
+      <h1>Prabhakar Reddy Chalamala</h1>
+      <p>
+        <strong>Phone:</strong> +91 6281646106 | 
+        <strong>Email:</strong> <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a> | 
+        <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener noreferrer">linkedin.com/in/prabhakar-reddy-chalamala-34923a232</a><br />
+        <strong>Location:</strong> Hyderabad, India
+      </p>
+      <div id="download-buttons">
+        <button id="download-pdf">Download PDF</button>
+        <button id="download-doc">Download DOC</button>
+      </div>
+    </section>
 
-<div id="content">
-  <h1>Prabhakar Reddy Chalamala</h1>
+    <section id="summary" class="section">
+      <h2>Professional Summary</h2>
+      <p>
+        Azure Data Engineer with 3 years of experience designing, developing, and managing secure, scalable data solutions on Azure. Skilled in Python, PySpark, SQL, Azure Databricks, Azure Data Lake, and Medallion Architecture implementation. Experienced in leveraging Unity Catalog for data governance and lineage. Proficient in automating ETL workflows, optimizing pipeline performance, and delivering actionable insights. Strong problem solver and collaborative team player committed to driving operational excellence.
+      </p>
+    </section>
 
-  <div id="download-buttons">
-    <button id="download-pdf">Download PDF</button>
-    <button id="download-doc">Download DOC</button>
-  </div>
+    <section id="skills" class="section">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Programming:</strong> Python, SQL</li>
+        <li><strong>Big Data & Cloud:</strong> Azure Databricks, Unity Catalog, Delta Lake, PySpark, Spark SQL, Azure Data Lake, Azure SQL Server</li>
+        <li><strong>ETL & Orchestration:</strong> AutoSys</li>
+        <li><strong>Version Control & CI/CD:</strong> Azure DevOps, Git</li>
+        <li><strong>Tools:</strong> Jupyter Notebook, Linux Shell Scripting, SQL Server, PostgreSQL</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Professional Summary</h2>
-    <p>Azure Data Engineer with 3 years of experience designing, developing, and managing secure, scalable data solutions on Azure. Skilled in Python, PySpark, SQL, Azure Databricks, Azure Data Lake, and Medallion Architecture implementation. Experienced in leveraging Unity Catalog for data governance and lineage. Proficient in automating ETL workflows, optimizing pipeline performance, and delivering actionable insights. Strong problem solver and collaborative team player committed to driving operational excellence.</p>
-  </section>
+    <section id="experience" class="section">
+      <h2>Professional Experience</h2>
+      <h3>Infinite Computer Solutions — Hyderabad</h3>
+      <p><em>Software Engineer | October 2022 – Present</em></p>
+      <ul>
+        <li>Developed and optimized PySpark scripts and Azure Databricks notebooks for Level-2 data curation, transforming datasets from raw layers into actionable business insights.</li>
+        <li>Automated data ingestion and transformation workflows using Python, reducing manual intervention by 30%.</li>
+        <li>Created AutoSys jobs to schedule PySpark notebooks and orchestrate data pipelines, ensuring timely and reliable execution.</li>
+        <li>Implemented Unity Catalog to manage centralized governance, fine-grained access control, and data lineage within Azure Databricks.</li>
+        <li>Designed and optimized Azure Data Factory pipelines for efficient data movement between Azure Data Lake and Azure SQL Server.</li>
+        <li>Validated input/output datasets using SQL and conducted thorough quality checks for data accuracy and consistency.</li>
+        <li>Managed source control, performed peer code reviews, and led CI/CD production deployments via Azure DevOps ensuring zero-defect releases.</li>
+        <li>Collaborated with stakeholders to align data solutions with evolving business requirements.</li>
+      </ul>
 
-  <section>
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Programming:</strong> Python, SQL</li>
-      <li><strong>Big Data & Cloud:</strong> Azure Databricks, Unity Catalog, Delta Lake, PySpark, Spark SQL, Azure Data Lake, Azure SQL Server</li>
-      <li><strong>ETL & Orchestration:</strong> AutoSys</li>
-      <li><strong>Version Control & CI/CD:</strong> Azure DevOps, Git</li>
-      <li><strong>Tools:</strong> Jupyter Notebook, Linux Shell Scripting, SQL Server, PostgreSQL</li>
-    </ul>
-  </section>
+      <h3>Key Project: L1 Chronic Condition Reports Implementation – Genesys & CCA (Healthcare Domain)</h3>
+      <ul>
+        <li>Led end-to-end development of L1 chronic condition reports using Azure Databricks and PySpark from scratch with minimal guidance.</li>
+        <li>Adapted quickly to evolving requirements and unknowns, delivering high-quality code and reports on time.</li>
+        <li>Created AutoSys jobs to automate pipeline scheduling and monitoring.</li>
+      </ul>
 
-  <section>
-    <h2>Professional Experience</h2>
+      <blockquote>
+        "I would like to appreciate Prabhakar for all his hard work on the L1 chronic condition reports implementation for Genesys and CCA. He took the project from scratch and ran with it with minimal guidance. It was not an easy project since there were several unknowns when we started and requirements were changed multiple times. He took the time to code/test and deliver on time. Appreciate all your work Prabhakar. Thank you for all that you do."
+        <br /><strong>— Client Manager, Genesys Project</strong>
+      </blockquote>
 
-    <h3>Software Engineer</h3>
-    <div>
-      <span class="company-location">Infinite Computer Solutions — Hyderabad</span>
-      <span class="date-range">Oct 2022 – Present</span>
-      <div class="clear"></div>
-    </div>
-    <ul>
-      <li>Developed and optimized PySpark scripts and Azure Databricks notebooks for Level-2 data curation, transforming datasets from raw layers into actionable business insights.</li>
-      <li>Automated data ingestion and transformation workflows using Python, reducing manual intervention by 30%.</li>
-      <li>Created AutoSys jobs to schedule PySpark notebooks and orchestrate data pipelines, ensuring timely and reliable execution.</li>
-      <li>Implemented Unity Catalog to manage centralized governance, fine-grained access control, and data lineage within Azure Databricks.</li>
-      <li>Designed and optimized Azure Data Factory pipelines for efficient data movement between Azure Data Lake and Azure SQL Server.</li>
-      <li>Validated input/output datasets using SQL and conducted thorough quality checks for data accuracy and consistency.</li>
-      <li>Managed source control, performed peer code reviews, and led CI/CD production deployments via Azure DevOps ensuring zero-defect releases.</li>
-      <li>Collaborated with stakeholders to align data solutions with evolving business requirements.</li>
-    </ul>
+      <h3>Achievements</h3>
+      <ul>
+        <li>Reduced pipeline execution time by 20% through PySpark and pipeline optimizations.</li>
+        <li>Awarded “Infinite Spark Award” (Performer of the Quarter, JAS-2024) and “Infinite Spot Award” (Performer of the Month, August 2024).</li>
+        <li>Developed automation scripts for log monitoring and alerts, cutting manual intervention by 40%.</li>
+        <li>Achieved 100% compliance and zero defects in production deployments.</li>
+      </ul>
+    </section>
 
-    <h3>Key Project: L1 Chronic Condition Reports Implementation – Genesys & CCA (Healthcare Domain)</h3>
-    <ul>
-      <li>Led end-to-end development of L1 chronic condition reports using Azure Databricks and PySpark from scratch with minimal guidance.</li>
-      <li>Adapted quickly to evolving requirements and unknowns, delivering high-quality code and reports on time.</li>
-      <li>Created AutoSys jobs to automate pipeline scheduling and monitoring.</li>
-    </ul>
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Real-Time ETL Pipeline:</strong> Built a real-time ETL pipeline using Azure Data Factory and Databricks, cutting processing time by 30%.</li>
+        <li><strong>Log Monitoring Automation:</strong> Automated log monitoring and alerting with Python, improving operational efficiency by 40%.</li>
+        <li><strong>L1 Chronic Condition Reports:</strong> Designed and delivered healthcare analytics reports using PySpark, Databricks, and AutoSys.</li>
+      </ul>
+    </section>
 
-    <blockquote>
-      "I would like to appreciate Prabhakar for all his hard work on the L1 chronic condition reports implementation for Genesys and CCA. He took the project from scratch and ran with it with minimal guidance. It was not an easy project since there were several unknowns when we started and requirements were changed multiple times. He took the time to code/test and deliver on time. Appreciate all your work Prabhakar. Thank you for all that you do." <br> — Client Manager, Genesys Project
-    </blockquote>
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <p>Bachelor’s Degree in Mathematics<br />Bestavarapeta, India | Nov 2018 – Jan 2021</p>
+    </section>
 
-    <h3>Achievements</h3>
-    <ul>
-      <li>Reduced pipeline execution time by 20% through PySpark and pipeline optimizations.</li>
-      <li>Awarded “Infinite Spark Award” (Performer of the Quarter, JAS-2024) and “Infinite Spot Award” (Performer of the Month, August 2024).</li>
-      <li>Developed automation scripts for log monitoring and alerts, cutting manual intervention by 40%.</li>
-      <li>Achieved 100% compliance and zero defects in production deployments.</li>
-    </ul>
-  </section>
+    <section id="softskills" class="section">
+      <h2>Soft Skills</h2>
+      <ul>
+        <li>Problem Solving & Debugging</li>
+        <li>Communication & Collaboration</li>
+        <li>Agile & Scrum Methodologies</li>
+        <li>Time Management & Attention to Detail</li>
+      </ul>
+    </section>
+  </main>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Real-Time ETL Pipeline:</strong> Built a real-time ETL pipeline using Azure Data Factory and Databricks, cutting processing time by 30%.</li>
-      <li><strong>Log Monitoring Automation:</strong> Automated log monitoring and alerting with Python, improving operational efficiency by 40%.</li>
-      <li><strong>L1 Chronic Condition Reports:</strong> Designed and delivered healthcare analytics reports using PySpark, Databricks, and AutoSys.</li>
-    </ul>
-  </section>
+  <script>
+    // Smooth scroll & active nav highlighting
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = [...navLinks].map(link => document.querySelector(link.getAttribute('href')));
+    window.addEventListener('scroll', () => {
+      let scrollPos = window.scrollY + 100;
+      sections.forEach((section, index) => {
+        if (
+          section.offsetTop <= scrollPos &&
+          section.offsetTop + section.offsetHeight > scrollPos
+        ) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          navLinks[index].classList.add('active');
+        }
+      });
+    });
 
-  <section>
-    <h2>Education</h2>
-    <p>Bachelor’s Degree in Mathematics<br />Bestavarapeta, India | Nov 2018 – Jan 2021</p>
-  </section>
+    // Scroll to section smoothly on click
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth',
+        });
+      });
+    });
 
-  <section>
-    <h2>Soft Skills</h2>
-    <ul>
-      <li>Problem Solving & Debugging</li>
-      <li>Communication & Collaboration</li>
-      <li>Agile & Scrum Methodologies</li>
-      <li>Time Management & Attention to Detail</li>
-    </ul>
-  </section>
+    // Download PDF & DOC buttons
+    document.getElementById('download-pdf').addEventListener('click', () => {
+      // Replace with actual PDF link
+      window.open('Prabhakar_Reddy_Resume.pdf', '_blank');
+    });
 
-  <section>
-    <h2>ATS Keywords</h2>
-    <p>Azure Data Engineer, Azure Databricks, PySpark, AutoSys, Unity Catalog, Delta Lake, Azure Data Lake, SQL, Python, ETL, Medallion Architecture, CI/CD, Azure DevOps, Data Pipeline, Data Quality, Healthcare Analytics, Cloud Computing</p>
-  </section>
-</div>
-
-<script>
-  // PDF Download
-  document.getElementById("download-pdf").addEventListener("click", () => {
-    const element = document.getElementById('content');
-    html2pdf().from(element).set({margin:0.5, filename:'Prabhakar_Reddy_Resume.pdf'}).save();
-  });
-
-  // DOC Download (simple method: save HTML content as .doc)
-  document.getElementById("download-doc").addEventListener("click", () => {
-    const content = document.getElementById('content').innerHTML;
-    const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' " +
-      "xmlns:w='urn:schemas-microsoft-com:office:word' " +
-      "xmlns='http://www.w3.org/TR/REC-html40'>" +
-      "<head><title>Prabhakar Reddy Resume</title></head><body>";
-    const footer = "</body></html>";
-    const sourceHTML = header + content + footer;
-
-    const blob = new Blob(['\ufeff', sourceHTML], {type:'application/msword'});
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'Prabhakar_Reddy_Resume.doc';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
-</script>
-
+    document.getElementById('download-doc').addEventListener('click', () => {
+      // Replace with actual DOC link
+      window.open('Prabhakar_Reddy_Resume.doc', '_blank');
+    });
+  </script>
 </body>
 </html>
