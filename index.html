@@ -4,9 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chalamala Prabhakar Reddy | Data Engineer</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -126,11 +132,46 @@
     </section>
   </main>
 
+  <!-- Download Button -->
   <button id="downloadBtn" title="Download Resume PDF"><i class="fas fa-download"></i></button>
 
   <!-- jsPDF and html2canvas from CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="script.js"></script>
+
+  <script>
+    window.onload = () => {
+      const downloadBtn = document.getElementById('downloadBtn');
+      const resumeContent = document.getElementById('resume-content');
+
+      downloadBtn.addEventListener('click', () => {
+        html2canvas(resumeContent, { scale: 2 }).then(canvas => {
+          const imgData = canvas.toDataURL('image/png');
+          const pdf = new jspdf.jsPDF('p', 'pt', 'a4');
+          const pdfWidth = pdf.internal.pageSize.getWidth();
+          const pdfHeight = pdf.internal.pageSize.getHeight();
+
+          const imgProps = pdf.getImageProperties(imgData);
+          const imgWidth = pdfWidth;
+          const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
+
+          let heightLeft = imgHeight;
+          let position = 0;
+
+          pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+          heightLeft -= pdfHeight;
+
+          while (heightLeft > 0) {
+            position = heightLeft - imgHeight;
+            pdf.addPage();
+            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+            heightLeft -= pdfHeight;
+          }
+
+          pdf.save('Chalamala-Prabhakar-Reddy-Resume.pdf');
+        });
+      });
+    };
+  </script>
 </body>
 </html>
