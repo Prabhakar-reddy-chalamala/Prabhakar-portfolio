@@ -20,33 +20,25 @@
 </head>
 <body>
 
-  <!-- Top Contact Bar -->
-  <div class="top-contact">
-    <span><i class="fas fa-phone-alt"></i> +91 6281646106</span>
-    <span><i class="fas fa-envelope"></i> <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a></span>
-    <span><i class="fab fa-linkedin"></i>
-      <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener noreferrer">linkedin.com/in/prabhakar-reddy-chalamala-34923a232</a>
-    </span>
-    <span><i class="fas fa-map-marker-alt"></i> Hyderabad, India</span>
-  </div>
-
-  <!-- Navigation Bar -->
-  <nav class="resume-nav">
-    <ul>
-      <li><a href="#summary">Summary</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <header>
+  <!-- Sticky Header -->
+  <header class="sticky-header">
+    <div class="header-content">
       <h1>Prabhakar Reddy Chalamala</h1>
       <p class="subtitle">Azure Data Engineer | PySpark | Azure Databricks | Data Factory | AI-Powered Development</p>
-    </header>
+    </div>
+    <nav class="resume-nav" aria-label="Resume Navigation">
+      <ul>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
 
     <section id="summary">
       <h2>Professional Summary</h2>
@@ -129,6 +121,7 @@
         <li><i class="fas fa-map-marker-alt"></i> Hyderabad, India</li>
       </ul>
     </section>
+
   </main>
 
   <button id="downloadPdfBtn" title="Download Resume PDF" aria-label="Download Resume PDF">
@@ -144,32 +137,21 @@
         btn.textContent = 'Generating PDF...';
         btn.disabled = true;
 
-        html2canvas(element, { scale: 2, useCORS: true }).then(canvas => {
+        html2canvas(element).then(canvas => {
           const imgData = canvas.toDataURL('image/png');
           const pdf = new jspdf.jsPDF('p', 'pt', 'a4');
 
+          const imgProps = pdf.getImageProperties(imgData);
           const pdfWidth = pdf.internal.pageSize.getWidth();
-          const pdfHeight = pdf.internal.pageSize.getHeight();
+          const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
 
-          const imgWidth = pdfWidth;
-          const imgHeight = (canvas.height * pdfWidth) / canvas.width;
+          pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+          pdf.save('Prabhakar_Reddy_Chalamala_Azure_Data_Engineer_Resume.pdf');
 
-          let heightLeft = imgHeight;
-          let position = 0;
-
-          // First page
-          pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-          heightLeft -= pdfHeight;
-
-          // Additional pages if needed
-          while (heightLeft > 0) {
-            position = heightLeft - imgHeight;
-            pdf.addPage();
-            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-            heightLeft -= pdfHeight;
-          }
-
-          pdf.save('Prabhakar_Reddy_Chalamala_Resume.pdf');
+          btn.textContent = 'Download PDF';
+          btn.disabled = false;
+        }).catch(() => {
+          alert('Failed to generate PDF. Please try again.');
           btn.textContent = 'Download PDF';
           btn.disabled = false;
         });
