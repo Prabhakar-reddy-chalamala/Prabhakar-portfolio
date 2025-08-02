@@ -3,125 +3,320 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prabhakar Reddy Chalamala – Azure Data Engineer</title>
+  <title>Prabhakar Reddy Chalamala - Azure Data Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #e8f0fe;
+      color: #1a1a1a;
+      line-height: 1.5;
+    }
+    a {
+      color: #0a66c2;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgb(0 0 0 / 0.1);
+    }
+    /* Header */
+    header {
+      text-align: center;
+      padding: 1rem 1rem 2rem;
+      background: #0a66c2;
+      color: white;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 0.2);
+    }
+    header h1 {
+      margin: 0 0 0.3rem;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    header p {
+      margin: 0;
+      font-weight: 500;
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+    /* Contact bar */
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .contact-bar p {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    /* Section styles */
+    section {
+      margin-bottom: 2rem;
+    }
+    section h2 {
+      color: #0a66c2;
+      border-bottom: 3px solid #0a66c2;
+      padding-bottom: 0.2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    section ul {
+      padding-left: 1.2rem;
+      margin-top: 0;
+    }
+    section ul li {
+      margin-bottom: 0.5rem;
+    }
+    blockquote {
+      background: #fff7cc;
+      border-left: 5px solid #f7d154;
+      margin: 1rem 0;
+      padding: 1rem 1.5rem;
+      font-style: italic;
+      color: #6b5b00;
+      line-height: 1.4;
+      border-radius: 6px;
+    }
+    /* Key achievements icons */
+    .achievements li {
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+    .achievements li::before {
+      content: "✓ ";
+      color: #0a66c2;
+      font-weight: 900;
+    }
+    /* Contact info list */
+    #contact ul {
+      list-style: none;
+      padding: 0;
+    }
+    #contact ul li {
+      margin-bottom: 0.6rem;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    /* Download PDF button */
+    #downloadPdfBtn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #0a66c2;
+      border: none;
+      color: white;
+      padding: 0.75rem 1.2rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgb(10 102 194 / 0.5);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background-color 0.3s ease;
+      z-index: 9999;
+    }
+    #downloadPdfBtn:hover {
+      background-color: #084c94;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.2rem 1.5rem;
+        margin: 1rem;
+      }
+      .contact-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 0.9rem;
+      }
+      header h1 {
+        font-size: 1.6rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <header class="sticky-header">
-    <div class="header-content">
-      <h1>Prabhakar Reddy Chalamala</h1>
-      <p class="subtitle">Azure Data Engineer | PySpark | Azure Databricks | Data Factory | AI‑Powered Development</p>
-    </div>
-    <nav class="resume-nav" aria-label="Site navigation">
-      <ul>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header>
+    <h1>Prabhakar Reddy Chalamala</h1>
+    <p>Azure Data Engineer | PySpark | Azure Databricks | Data Factory | AI-Powered Development</p>
   </header>
 
-  <main>
-    <section id="summary"><h2>Professional Summary</h2>
-      <p>Results‑driven Azure Data Engineer with 3+ years of experience building scalable cloud data pipelines. Skilled in PySpark, Azure Databricks, Data Factory, and Unity Catalog. Strong automation, ETL orchestration, and AI‑enhanced development experience with GitHub Copilot and Databricks Assistant.</p>
+  <div class="container" id="resumeContent">
+    <div class="contact-bar">
+      <p><i class="fas fa-phone"></i> +91 6281646106</p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a></p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/prabhakar-reddy-chalamala-34923a232" target="_blank" rel="noopener noreferrer">linkedin.com/in/prabhakar-reddy-chalamala-34923a232</a></p>
+      <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+    </div>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Results-driven Azure Data Engineer with over 3 years of experience designing, building, and automating scalable data solutions in the cloud. Expertise in PySpark, SQL, Azure Databricks, Data Lake, and Data Factory. Proficient in applying Medallion Architecture and Unity Catalog for structured data processing and governance. Skilled in using GitHub Copilot and Databricks Assistant to accelerate development and ensure code quality. Adept at automating ETL workflows and scripting solutions that significantly reduce manual efforts, improve reliability, and increase efficiency. Known for independent ownership, client satisfaction, and timely delivery under dynamic requirements.
+      </p>
     </section>
 
-    <section id="skills"><h2>Technical Skills</h2>
+    <section>
+      <h2>Technical Skills</h2>
       <ul>
-        <li>Python, SQL, Spark SQL, Shell Scripting</li>
-        <li>Azure Databricks, Delta Lake, ADLS Gen 2, Synapse, Unity Catalog</li>
-        <li>Azure Data Factory (ADF), PySpark, AutoSys orchestration</li>
-        <li>Git, GitHub, Azure DevOps, CI/CD pipelines</li>
-        <li>GitHub Copilot, Databricks Assistant for development</li>
-        <li>Azure Monitor, Log Alerts, Jupyter Notebooks</li>
+        <li><strong>Programming & Scripting:</strong> Python, SQL, Spark SQL, Shell Scripting</li>
+        <li><strong>Big Data & Cloud Tools:</strong> Azure Databricks, Delta Lake, Azure Data Lake Gen2, Azure Synapse Analytics, Unity Catalog</li>
+        <li><strong>ETL & Workflow Orchestration:</strong> Azure Data Factory (ADF), PySpark, AutoSys</li>
+        <li><strong>Version Control & DevOps:</strong> Git, Azure DevOps, GitHub, CI/CD Pipelines</li>
+        <li><strong>AI Tools for Development:</strong> GitHub Copilot, Databricks Assistant</li>
+        <li><strong>Monitoring & Debugging:</strong> Azure Monitor, Log Alerts, Jupyter Notebook</li>
       </ul>
     </section>
 
-    <section id="experience"><h2>Professional Experience</h2>
-      <h3>Software Engineer @ Infinite Computer Solutions (Oct 2022 – Present)</h3>
-      <p>Hyderabad, India</p>
+    <section>
+      <h2>Professional Experience</h2>
+      <h3>Infinite Computer Solutions – Hyderabad, India</h3>
+      <p><em>Software Engineer | Oct 2022 – Present</em></p>
       <ul>
-        <li>Built scalable PySpark pipelines following Medallion Architecture in Databricks</li>
-        <li>Automated ETL with ADF and AutoSys, reducing manual work by ~30%</li>
-        <li>Implemented Unity Catalog governance and lineage tracking</li>
-        <li>Created automation scripts for log monitoring—improving incident response by 40%</li>
-        <li>Managed CI/CD releases via DevOps with zero-defect production deployments</li>
+        <li>Developed scalable PySpark pipelines in Azure Databricks for Level-2 data curation, implementing the Medallion Architecture for structured data processing.</li>
+        <li>Automated ETL pipelines using Azure Data Factory, Python, and AutoSys, reducing manual intervention by 30%.</li>
+        <li>Designed and deployed Azure Data Factory pipelines for ingesting and transforming data across Data Lake and Azure SQL Server.</li>
+        <li>Implemented Unity Catalog for centralized data governance, fine-grained access control, and lineage tracking.</li>
+        <li>Integrated Databricks Assistant to boost productivity during code development, debugging, and notebook performance tuning.</li>
+        <li>Used GitHub Copilot for generating Python code and test automation, improving speed and accuracy of development.</li>
+        <li>Created a robust automated Python script for repetitive log monitoring and alerting tasks, significantly reducing manual workload and improving incident response time by 40%.</li>
+        <li>Managed version control and conducted CI/CD releases using Azure DevOps, achieving zero-defect deployments across environments.</li>
+        <li>Collaborated with cross-functional teams to gather requirements, implement solutions, and ensure alignment with business objectives.</li>
       </ul>
-      <h4>Key Project: L1 Chronic Condition Reports (Genesys & CCA)</h4>
+
+      <h4>Key Project: L1 Chronic Condition Reports – Genesys & CCA (Healthcare Domain)</h4>
       <ul>
-        <li>Led end-to-end pipeline from ingestion to reporting using Databricks, PySpark, AutoSys</li>
-        <li>Designed modular validation and reporting components adaptive to changing requirements</li>
+        <li>Independently led the development of a complete reporting pipeline from raw data to business-level insights using Databricks, PySpark, and AutoSys.</li>
+        <li>Designed modular components for data validation, transformation, and reporting under frequent requirement changes.</li>
+        <li>Automated pipeline orchestration and monitoring, ensuring reliability and timely delivery.</li>
       </ul>
-      <blockquote>“Client appreciation for your work on L1 chronic condition implementation… Appreciate your proactivity and delivery.”<footer>— Client Manager, Genesys Project</footer></blockquote>
+
+      <blockquote>
+        "I would like to appreciate Prabhakar for all his hard work on the L1 chronic condition reports implementation for Genesys and CCA. He took the project from scratch and ran with it with minimal guidance. It was not an easy project since there were several unknowns when we started and requirements were changed multiple times. He took the time to code/test and deliver on time. Appreciate all your work Prabhakar. Thank you for all that you do."
+        <br/><br/>
+        — Client Manager, Genesys Project
+      </blockquote>
     </section>
 
-    <section id="achievements"><h2>Achievements</h2>
-      <ul>
-        <li>Infinite Spark Award – Performer of the Quarter (JAS‑2024)</li>
-        <li>Infinite Spot Award – Performer of the Month (Aug 2024)</li>
-        <li>Reduced pipeline runtime by 20% via query optimization</li>
-        <li>Automated monitoring reduced manual effort by 40%</li>
-        <li>Achieved zero defect compliance in production deployments</li>
+    <section>
+      <h2>Key Achievements</h2>
+      <ul class="achievements">
+        <li>🏆 “Infinite Spark Award” – Performer of the Quarter (JAS-2024)</li>
+        <li>🌟 “Infinite Spot Award” – Performer of the Month (August 2024)</li>
+        <li>⚡ Reduced pipeline execution time by 20% through Spark optimization and query tuning</li>
+        <li>🛠️ Built automation scripts for log monitoring and alerting, cutting manual intervention by 40%</li>
+        <li>🧠 Successfully applied AI tools like GitHub Copilot and Databricks Assistant to speed up delivery and improve code quality</li>
+        <li>✅ Achieved 100% compliance and zero defects in production deployments</li>
+        <li>💬 Recognized by client leadership for independently delivering high-impact data reporting solutions</li>
       </ul>
     </section>
 
-    <section id="projects"><h2>Projects</h2>
+    <section>
+      <h2>Projects</h2>
       <ul>
-        <li><strong>Real-Time ETL Optimization:</strong> Reduced processing time by 30% using ADF and Databricks</li>
-        <li><strong>Automated Log Monitoring Tool:</strong> Python-based alert system boosting uptime</li>
-        <li><strong>L1 Chronic Condition Reports:</strong> Full-stack healthcare analytics pipeline delivered independently</li>
+        <li><strong>Real-Time ETL Pipeline Optimization:</strong> Built and optimized real-time ETL pipeline with Azure Data Factory and Databricks, reducing data processing time by 30%.</li>
+        <li><strong>Automated Log Monitoring Tool:</strong> Created a Python-based monitoring system integrated with alerts to reduce manual error checks and improve uptime.</li>
+        <li><strong>L1 Chronic Condition Reports:</strong> Designed full-stack data pipeline from ingestion to reporting for a healthcare analytics use case using PySpark, AutoSys, and Unity Catalog.</li>
       </ul>
     </section>
 
-    <section id="education"><h2>Education</h2>
-      <p><strong>Bachelor’s Degree in Mathematics</strong><br>Bestavarapeta, India • Nov 2018 – Jan 2021</p>
-    </section>
-
-    <section id="contact"><h2>Contact</h2>
+    <section id="contact">
+      <h2>Contact Information</h2>
       <ul>
-        <li><i class="fas fa-phone-alt"></i> +91 62816 46106</li>
-        <li><i class="fas fa-envelope"></i> <a href="mailto:reddyprabhakar303@gmail.com">reddyprabhakar303@gmail.com</a></li>
-        <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/prabhakar‑reddy‑chalamala‑34923a232" target="_blank">LinkedIn</a></li>
+        <li><i class="fas fa-phone"></i> +91 6281646106</li>
+        <li><i class="fas fa-envelope"></i> reddyprabhakar303@gmail.com</li>
+        <li><i class="fab fa-linkedin"></i> linkedin.com/in/prabhakar-reddy-chalamala-34923a232</li>
         <li><i class="fas fa-map-marker-alt"></i> Hyderabad, India</li>
       </ul>
     </section>
-  </main>
+  </div>
 
-  <button id="downloadPdfBtn" title="Download Resume PDF"><i class="fas fa-download"></i> Download PDF</button>
+  <button id="downloadPdfBtn" title="Download Resume as PDF">
+    <i class="fas fa-download"></i> Download PDF
+  </button>
+
+  <!-- jsPDF & html2canvas from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
   <script>
     window.onload = () => {
       const btn = document.getElementById('downloadPdfBtn');
-      btn.addEventListener('click', () => {
-        btn.textContent = 'Generating PDF...'; btn.disabled = true;
-        html2canvas(document.querySelector('main'), { scale: 2 }).then(canvas => {
-          const img = canvas.toDataURL('image/png');
+      btn.addEventListener('click', async () => {
+        btn.disabled = true;
+        btn.textContent = "Generating PDF...";
+
+        const resumeElement = document.getElementById('resumeContent');
+
+        try {
+          // Use html2canvas to capture the resume content as canvas
+          const canvas = await html2canvas(resumeElement, { scale: 2, useCORS: true });
+
+          const imgData = canvas.toDataURL('image/png');
           const pdf = new jspdf.jsPDF('p', 'pt', 'a4');
-          const w = pdf.internal.pageSize.getWidth();
-          const h = (canvas.height * w) / canvas.width;
-          let y = 0;
-          pdf.addImage(img, 'PNG', 0, y, w, h);
-          let left = h - pdf.internal.pageSize.getHeight();
-          while (left > 0) {
-            y -= pdf.internal.pageSize.getHeight();
-            pdf.addPage();
-            pdf.addImage(img, 'PNG', 0, y, w, h);
-            left -= pdf.internal.pageSize.getHeight();
+          const pdfWidth = pdf.internal.pageSize.getWidth();
+          const pdfHeight = pdf.internal.pageSize.getHeight();
+
+          // Calculate image height to keep aspect ratio
+          const imgProps = pdf.getImageProperties(imgData);
+          const imgHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+          if (imgHeight < pdfHeight) {
+            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, imgHeight);
+          } else {
+            // If content height is more than one page, add pages
+            let heightLeft = imgHeight;
+            let position = 0;
+
+            while (heightLeft > 0) {
+              pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeight);
+              heightLeft -= pdfHeight;
+              position -= pdfHeight;
+              if (heightLeft > 0) pdf.addPage();
+            }
           }
+
           pdf.save('Prabhakar_Azure_Data_Engineer_Resume.pdf');
-          btn.innerHTML = '<i class="fas fa-download"></i> Download PDF';
-          btn.disabled = false;
-        });
+        } catch (error) {
+          alert('Error generating PDF: ' + error);
+        }
+
+        btn.textContent = "Download PDF";
+        btn.disabled = false;
       });
     };
   </script>
+
 </body>
 </html>
