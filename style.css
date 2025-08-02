@@ -1,181 +1,103 @@
-/* Reset & base */
-* {
-  box-sizing: border-box;
-}
-
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'Inter', sans-serif;
-  line-height: 1.5;
+  background: #f0f4fa;
   color: #1a1a1a;
-  background-color: #fafafa;
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
+  padding: 0 20px;
 }
-
 main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px 40px 40px 40px;
-
-  /* padding top to avoid content behind sticky header */
-  padding-top: 145px;
+  max-width: 900px; width: 100%;
+  background: white; margin: 0 auto;
+  padding: 180px 50px 60px;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
 }
 
-/* Sticky header */
+/* Sticky Header */
 .sticky-header {
-  position: fixed;
-  top: 0;
-  left: 50%;
+  position: fixed; top: 0; left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  max-width: 900px;
-  background-color: white;
-  border-bottom: 3px solid #0a66c2;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-  z-index: 1100;
-  padding: 15px 40px 5px 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.header-content {
+  width: 100%; max-width: 900px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  z-index: 999; padding: 20px 50px 10px;
   text-align: center;
-  margin-bottom: 10px;
 }
-
 .sticky-header h1 {
-  font-size: 2.8rem;
-  font-weight: 900;
-  margin-bottom: 0.15rem;
-  color: #0a66c2;
+  font-size: 2.8rem; color: #3a76e3; font-weight: 800;
 }
-
 .sticky-header .subtitle {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #0a66c2cc;
-  margin: 0;
+  font-size: 1.1rem; color: #555; font-weight: 500;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
 }
 
-/* Nav styling */
+/* Nav Style */
 .resume-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex; justify-content: center;
+  gap: 20px; list-style: none;
+  margin-top: 10px;
 }
-
 .resume-nav ul li a {
-  color: #0a66c2;
-  font-weight: 700;
-  font-size: 1rem;
+  color: #3a76e3; font-size: 1rem; font-weight: 600;
+  padding: 6px 12px; border-radius: 4px;
+  transition: background 0.3s;
   text-decoration: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .resume-nav ul li a:hover,
 .resume-nav ul li a:focus {
-  background-color: #0a66c2;
-  color: white;
-  outline: none;
+  background: #3a76e3; color: white;
 }
 
-/* Section headings */
+/* Sections */
+section { margin-top: 40px; }
 h2 {
-  font-size: 2rem;
-  color: #0a66c2;
-  border-bottom: 3px solid #0a66c2;
-  padding-bottom: 0.2rem;
-  margin-bottom: 1rem;
+  font-size: 2rem; color: #3a76e3;
+  border-bottom: 2px solid #f0f4fa; padding-bottom: 4px;
 }
+h3 { font-size: 1.4rem; margin-top: 20px; color: #333; }
+h4 { font-size: 1.2rem; margin-top: 16px; color: #3a76e3; }
 
-h3 {
-  margin-top: 1.6rem;
-  margin-bottom: 0.6rem;
-  color: #333;
-}
+/* Text & lists */
+p, ul { font-size: 1rem; color: #444; margin-bottom: 1rem; }
+ul { padding-left: 1.4rem; }
 
-h4 {
-  margin-top: 1.2rem;
-  margin-bottom: 0.4rem;
-  color: #444;
-}
-
-p, ul {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-ul {
-  padding-left: 1.4rem;
-}
-
+/* Testimonial */
 blockquote {
-  border-left: 4px solid #0a66c2;
-  background: #e8f0fe;
-  padding: 1rem 1.2rem;
-  margin: 1rem 0 1.5rem 0;
-  font-style: italic;
-  color: #0a66c2;
+  background: #eff4fb; border-left: 5px solid #3a76e3;
+  padding: 12px 16px; margin: 20px 0;
+  font-style: italic; color: #3a3a3a;
+}
+blockquote footer {
+  margin-top: 8px; color: #3a76e3;
+  font-weight: bold; font-style: normal;
 }
 
-/* Contact info icons */
-#contact ul {
-  list-style: none;
-  padding-left: 0;
-}
-
+/* Contact */
+#contact ul { list-style: none; padding: 0; }
 #contact ul li {
-  margin-bottom: 0.6rem;
-  font-size: 1.05rem;
-  color: #0a66c2;
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 8px; font-size: 1rem; color: #3a76e3;
 }
-
 #contact ul li a {
-  color: #0a66c2;
-  text-decoration: none;
+  color: #3a76e3; text-decoration: none;
 }
+#contact ul li a:hover { text-decoration: underline; }
 
-#contact ul li a:hover,
-#contact ul li a:focus {
-  text-decoration: underline;
-}
-
-/* Download PDF button */
+/* Download Button */
 #downloadPdfBtn {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  background-color: #0a66c2;
-  color: white;
-  font-weight: 700;
-  border: none;
-  border-radius: 6px;
-  padding: 0.7rem 1.2rem;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgb(10 102 194 / 0.6);
-  transition: background-color 0.3s ease;
-  z-index: 1200;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
+  position: fixed; bottom: 20px; right: 20px;
+  background: #3a76e3; color: white;
+  border: none; padding: 14px 22px;
+  font-size: 1rem; font-weight: 600;
+  border-radius: 50px; cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  display: flex; align-items: center; gap: 8px;
+  z-index: 1000; transition: background 0.3s;
 }
-
 #downloadPdfBtn:hover,
 #downloadPdfBtn:focus {
-  background-color: #074a99;
-  outline: none;
-}
-
-#downloadPdfBtn:disabled {
-  background-color: #999;
-  cursor: not-allowed;
-  box-shadow: none;
+  background: #2559a3; outline: none;
 }
