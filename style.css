@@ -1,85 +1,78 @@
-/* Reset and base */
+/* Reset & base */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0a66c2;
-  color: white;
-  line-height: 1.6;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
 }
 
 main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 40px 40px 40px;
+
+  /* padding top to avoid content behind sticky header */
+  padding-top: 145px;
+}
+
+/* Sticky header */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 900px;
   background-color: white;
-  color: #222;
-  max-width: 900px;
-  width: 100%;
-  padding: 40px 60px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgb(0 0 0 / 0.1);
-}
-
-.top-contact {
-  background-color: #004182;
-  color: white;
+  border-bottom: 3px solid #0a66c2;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  z-index: 1100;
+  padding: 15px 40px 5px 40px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  font-size: 0.95rem;
-  padding: 10px 15px;
-  border-radius: 20px;
-  max-width: 900px;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.top-contact span {
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 7px;
 }
 
-.top-contact a {
-  color: white;
-  text-decoration: none;
+.header-content {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.top-contact a:hover {
-  text-decoration: underline;
+.sticky-header h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 0.15rem;
+  color: #0a66c2;
 }
 
-/* Navigation */
-.resume-nav {
-  background: #0a66c2cc;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  max-width: 900px;
-  width: 100%;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+.sticky-header .subtitle {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #0a66c2cc;
+  margin: 0;
 }
 
+/* Nav styling */
 .resume-nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .resume-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
+  color: #0a66c2;
+  font-weight: 700;
   font-size: 1rem;
+  text-decoration: none;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -87,93 +80,61 @@ main {
 
 .resume-nav ul li a:hover,
 .resume-nav ul li a:focus {
-  background-color: #084a8a;
-  color: #fff;
+  background-color: #0a66c2;
+  color: white;
   outline: none;
 }
 
-/* Header */
-header h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  margin-bottom: 0.1rem;
-  color: #0a66c2;
-  font-family: 'Inter', sans-serif;
-}
-
-.subtitle {
-  color: #0a66c2cc;
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
-/* Section titles */
-section h2 {
+/* Section headings */
+h2 {
   font-size: 2rem;
-  font-weight: 700;
-  border-bottom: 3px solid #0a66c2;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
   color: #0a66c2;
+  border-bottom: 3px solid #0a66c2;
+  padding-bottom: 0.2rem;
+  margin-bottom: 1rem;
 }
 
-/* Lists */
-ul {
-  list-style: disc inside;
-  margin-bottom: 25px;
-  line-height: 1.5;
-}
-
-section ul li {
-  margin-bottom: 0.5rem;
-}
-
-/* Headings inside experience */
 h3 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  color: #222;
+  margin-top: 1.6rem;
+  margin-bottom: 0.6rem;
+  color: #333;
 }
 
 h4 {
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #0a66c2;
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: #444;
+}
+
+p, ul {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.4rem;
 }
 
 blockquote {
-  background-color: #eaf3ff;
-  color: #084a8a;
-  border-left: 6px solid #0a66c2;
-  padding: 15px 20px;
-  margin: 10px 0 30px 0;
+  border-left: 4px solid #0a66c2;
+  background: #e8f0fe;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0 1.5rem 0;
   font-style: italic;
-  font-size: 1rem;
-  border-radius: 8px;
+  color: #0a66c2;
 }
 
-blockquote footer {
-  font-style: normal;
-  font-weight: 700;
-  margin-top: 10px;
-  color: #084a8a;
-}
-
-/* Contact section */
+/* Contact info icons */
 #contact ul {
   list-style: none;
   padding-left: 0;
 }
 
 #contact ul li {
-  margin-bottom: 12px;
-  font-weight: 600;
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
   color: #0a66c2;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 #contact ul li a {
@@ -181,37 +142,40 @@ blockquote footer {
   text-decoration: none;
 }
 
-#contact ul li a:hover {
+#contact ul li a:hover,
+#contact ul li a:focus {
   text-decoration: underline;
 }
 
-/* Download Button */
+/* Download PDF button */
 #downloadPdfBtn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 15px;
+  right: 15px;
   background-color: #0a66c2;
   color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 15px 25px;
-  font-size: 1rem;
   font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgb(10 102 194 / 0.7);
+  box-shadow: 0 4px 12px rgb(10 102 194 / 0.6);
+  transition: background-color 0.3s ease;
+  z-index: 1200;
   display: flex;
   align-items: center;
-  gap: 10px;
-  z-index: 1000;
-  transition: background-color 0.3s ease;
+  gap: 0.6rem;
 }
 
 #downloadPdfBtn:hover,
 #downloadPdfBtn:focus {
-  background-color: #084a8a;
+  background-color: #074a99;
   outline: none;
 }
 
-#downloadPdfBtn i {
-  font-size: 1.2rem;
+#downloadPdfBtn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+  box-shadow: none;
 }
